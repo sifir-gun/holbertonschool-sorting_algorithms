@@ -14,11 +14,9 @@ void shell_sort(int *array, size_t size)
 	if (array == NULL || size < 2)
 		return;
 
-	/* Calculate initial gap using Knuth sequence */
 	while (gap < size / 3)
 		gap = gap * 3 + 1;
 
-	/* Perform Shell sort */
 	while (gap > 0)
 	{
 		for (i = gap; i < size; i++)
